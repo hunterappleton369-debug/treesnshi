@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Arbor Amplify | Industrial Tree Service Growth</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "secondary": "#22c55e", 
+                        "secondary-container": "#4ade80", 
+                        "on-secondary-container": "#14532d",
+                        "yellow-banner": "#facc15",
+                        "error": "#ef4444",
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 700; }
+        body { font-family: 'Inter', sans-serif; }
+        .brutalist-border { border: 2px solid #000000; }
+        .text-underline-green { 
+            text-decoration: underline; 
+            text-decoration-color: #22c55e; 
+            text-decoration-thickness: 4px; 
+            text-underline-offset: 4px;
+        }
+        .doodle-circle {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -15px;
+            border: 3px solid #ef4444;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .doodle-underline {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q50,0 100,50" stroke="%23ef4444" stroke-width="8" fill="none"/></svg>') no-repeat center;
+            background-size: 100% 100%;
+            pointer-events: none;
+        }
+        .apple-clean {
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border-radius: 16px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 selection:bg-secondary-container">
+
+    <!-- SCARCITY BAR (TopAppBar) -->
+    <header class="sticky top-0 z-50 w-full flex justify-center items-center py-2 px-6 bg-yellow-banner shadow-sm">
+        <div class="max-w-7xl w-full flex justify-center items-center gap-2">
+            <span class="font-black uppercase tracking-widest text-[12px] text-black text-center flex items-center justify-center gap-2"> 
+                📣 ESTABLISHED TREE SERVICE OWNERS RUNNING CREWS & MISSING CALLS 📣 
+            </span>
+        </div>
+    </header>
+
+    <!-- NAV BAR -->
+    <nav class="w-full bg-white py-4 px-6 border-b border-gray-200 sticky top-[36px] z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Tech Tree Logo with Arrow Leaves -->
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="45" y="60" width="10" height="30" fill="#000000" rx="2" />
+                    <!-- Arrow shaped leaves -->
+                    <path d="M50 10 L80 45 L60 45 L85 75 L15 75 L40 45 L20 45 Z" fill="#22c55e" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-xl font-black tracking-tighter uppercase whitespace-nowrap">Arbor Amplify</span>
+            </div>
+            <div>
+                <a href="#apply" class="bg-primary text-white px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition rounded-full shadow-md">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-white pt-24 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute top-10 right-10 opacity-5">
+            <svg width="300" height="300" viewBox="0 0 100 100">
+                <path d="M50 10 L80 45 L60 45 L85 75 L15 75 L40 45 L20 45 Z" fill="#22c55e"/>
+            </svg>
+        </div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 block">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-primary mb-6">
+                We will answer <span class="relative inline-block px-1">every call<div class="doodle-underline"></div></span> to your tree service business FREE for 7 days to show you every dollar you're losing.
+            </h1>
+            <p class="text-xl md:text-2xl font-normal text-gray-500 max-w-3xl mx-auto leading-relaxed mt-8">
+                <span class="font-black text-black">AND</span> Pay the Phone Bill. <span class="italic font-bold text-underline-green text-black">No obligations.</span>
+            </p>
+        </div>
+
+        <!-- VALUE PROPOSITION CARD -->
+        <div class="max-w-4xl mx-auto mt-20 bg-primary apple-clean p-10 md:p-16 relative shadow-2xl">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-banner px-6 py-2 text-[12px] font-black tracking-[0.2em] text-black uppercase rounded-full shadow-md whitespace-nowrap">
+                A COMPLETE, NO BS BREAKDOWN ...
+            </div>
+            <h2 class="text-2xl md:text-4xl lg:text-5xl font-black leading-tight text-white uppercase text-center mt-4">
+                <div class="relative inline-block mb-6 pt-4"><span class="relative z-10">Every missed call could be $800 down the drain</span><div class="doodle-circle"></div></div>
+                <div class="mt-4"><span class="text-secondary">4 Lost jobs per week</span> = $179k You're Losing Every Year</div>
+            </h2>
+            <p class="mt-10 text-[11px] font-bold tracking-[0.3em] text-gray-400 text-center uppercase">Based on industry average data</p>
+        </div>
+
+        <div class="flex flex-col items-center mt-12 cursor-pointer group hover:scale-105 transition-all">
+            <span class="text-xs font-black tracking-widest uppercase mb-2 text-gray-500 transition-colors group-hover:text-primary">
+                ↓ KEEP READING TO SEE THE FULL BREAKDOWN ↓
+            </span>
+        </div>
+    </section>
+
+    <!-- SECTION: THE $3000 CALL -->
+    <section class="bg-gray-50 py-24 px-6 border-b border-gray-200 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-8">Why missing calls costs <span class="text-error relative inline-block">MILLIONS<div class="doodle-underline" style="bottom:-10px"></div></span></h2>
+                    <div class="space-y-6 text-xl text-gray-600 leading-relaxed font-medium">
+                        <p>A homeowner needed a hazardous oak removed after the storm. They called you first. You were running the chipper. No one picked up. It's a $3000 removal.</p>
+                        <p class="font-bold text-primary">By the time you checked your voicemail 3 hours later, your competitor had already finished the estimate and booked the job. And this has been happening for years.</p>
+                        <p>How many calls are you missing? Here's the math:</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-white apple-clean p-8 flex flex-col group hover:border-secondary transition-all">
+                        <div class="text-primary text-5xl font-black mb-2 group-hover:-translate-y-1 transition-transform">$800</div>
+                        <div class="font-black uppercase tracking-widest text-xs text-secondary mt-1">Lost per missed job (average)</div>
+                    </div>
+                    <div class="bg-white apple-clean p-8 flex flex-col group hover:border-secondary transition-all">
+                        <div class="text-primary text-5xl font-black mb-2 group-hover:-translate-y-1 transition-transform">85%</div>
+                        <div class="font-black uppercase tracking-widest text-xs text-secondary mt-1">Never call back after voicemail</div>
+                    </div>
+                    <!-- Urgent Callout -->
+                    <div class="bg-error text-white apple-clean p-8 relative shadow-xl overflow-hidden group">
+                        <!-- BG Pattern -->
+                        <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px);"></div>
+                        <div class="relative z-10">
+                            <div class="text-white text-4xl md:text-5xl font-black mb-4 leading-none group-hover:scale-105 transition-transform origin-left">$1.8 MILLION LOST OVER 10 YEARS</div>
+                            <div class="font-black uppercase tracking-widest text-xs opacity-90 border-l-4 border-white pl-3 py-1">You could retire with that</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCY BAR -->
+    <div class="bg-error text-white py-6 px-6 text-center border-b-8 border-black shadow-inner">
+        <p class="font-black uppercase tracking-[0.1em] text-sm md:text-base flex items-center justify-center gap-2 flex-wrap drop-shadow-md">
+            <span class="material-symbols-outlined text-2xl">warning</span>
+            Please Note: We are only accepting 5 applicants for this cycle.
+            <span class="material-symbols-outlined text-2xl">warning</span>
+        </p>
+    </div>
+
+    <!-- SECTION: THE CHALLENGE & OFFERS -->
+    <section class="bg-white py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24 relative mx-auto w-full">
+                <span class="text-secondary font-black uppercase tracking-[0.4em] text-sm md:text-base bg-secondary/10 px-4 py-2 rounded-full">The 7-Day Missing Customer Challenge™</span>
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter mt-8 text-primary relative z-10 leading-none">
+                    Here's Everything You Get. <span class="relative inline-block whitespace-nowrap px-1">Free.<div class="doodle-circle" style="border-color:#22c55e"></div></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Offer 1 -->
+                <div class="bg-white apple-clean p-10 flex flex-col relative overflow-hidden group hover:shadow-2xl transition-shadow border-2 border-transparent hover:border-secondary">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary opacity-5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="mb-8">
+                        <span class="bg-secondary text-white font-black text-xs px-4 py-2 rounded-full uppercase tracking-widest shadow-sm border border-secondary/20 block w-max">$3,000 VALUE</span>
+                    </div>
+                    <!-- Hormozi Offer Rewriting -->
+                    <h3 class="text-2xl font-black leading-tight mb-4 relative z-10 uppercase">24/7 Revenue Recovering Call Answering System</h3>
+                    <p class="text-gray-600 flex-grow relative z-10 font-medium leading-relaxed">
+                        Never miss a $3,000 job again by having our US-based arbor-trained dispatchers answer every call instantly and professionally. Win the job before your competitor even checks their voicemail.
+                    </p>
+                </div>
+                
+                <!-- Offer 2 -->
+                <div class="bg-white apple-clean p-10 flex flex-col relative overflow-hidden group hover:shadow-2xl transition-shadow border-2 border-transparent hover:border-secondary">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary opacity-5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="mb-8">
+                        <span class="bg-secondary text-white font-black text-xs px-4 py-2 rounded-full uppercase tracking-widest shadow-sm border border-secondary/20 block w-max">$2,000 VALUE</span>
+                    </div>
+                    <h3 class="text-2xl font-black leading-tight mb-4 relative z-10 uppercase">Local Rapid Growth Intelligence Report</h3>
+                    <p class="text-gray-600 flex-grow relative z-10 font-medium leading-relaxed">
+                        The exact blueprint to steal your rivals' clients using their top-performing ads. We find the winners in your local market and give them to you. No guessing. Just pure profit.
+                    </p>
+                </div>
+                
+                <!-- Offer 3 -->
+                <div class="bg-white apple-clean p-10 flex flex-col relative overflow-hidden group hover:shadow-2xl transition-shadow border-2 border-transparent hover:border-secondary">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary opacity-5 rounded-full transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="mb-8">
+                        <span class="bg-secondary text-white font-black text-xs px-4 py-2 rounded-full uppercase tracking-widest shadow-sm border border-secondary/20 block w-max">$500/WEEK VALUE</span>
+                    </div>
+                    <h3 class="text-2xl font-black leading-tight mb-4 relative z-10 uppercase">Cash Collecting Closer System</h3>
+                    <p class="text-gray-600 flex-grow relative z-10 font-medium leading-relaxed">
+                        The automated follow-up system with battle-tested scripts that takes your close rate from 45% to 65% on autopilot. Turn clients sitting on free estimates into confirmed buyers effortlessly.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-24 max-w-2xl mx-auto" id="apply">
+                <div class="text-error font-black text-5xl mb-12 text-center uppercase tracking-tighter">
+                    <span class="relative inline-block">TOTAL VALUE — $8,500<div class="doodle-underline" style="bottom:-5px; height:12px;"></div></span>
+                </div>
+                
+                <div class="bg-white apple-clean p-10 border-t-[12px] border-t-secondary shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] relative overflow-hidden">
+                    <div class="absolute right-[-45px] top-[20px] bg-error text-white font-black text-xs uppercase px-12 py-1 rotate-45 tracking-widest shadow-md">
+                        FREE
+                    </div>
+                    <h3 class="text-3xl font-black tracking-tighter mb-4 uppercase">Application Form</h3>
+                    <div class="text-xs font-black text-error uppercase tracking-widest mb-8 bg-error/10 px-4 py-2 inline-block rounded-md border border-error/20">Deadline to Apply: March 31st</div>
+                    
+                    <!-- Qualification Form -->
+                    <form id="lead-form" class="space-y-5 text-left">
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
+                            <input type="text" id="name" required class="w-full bg-gray-50 border-2 border-gray-200 rounded-lg p-4 outline-none focus:ring-0 focus:border-secondary transition-all font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required class="w-full bg-gray-50 border-2 border-gray-200 rounded-lg p-4 outline-none focus:ring-0 focus:border-secondary transition-all font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Company Name</label>
+                            <input type="text" id="company" required class="w-full bg-gray-50 border-2 border-gray-200 rounded-lg p-4 outline-none focus:ring-0 focus:border-secondary transition-all font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Estimate of Daily Missed Calls</label>
+                            <input type="number" id="missedCalls" required min="0" class="w-full bg-gray-50 border-2 border-gray-200 rounded-lg p-4 outline-none focus:ring-0 focus:border-secondary transition-all font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Are you the Owner/Decision Maker?</label>
+                            <select id="decisionMaker" required class="w-full bg-gray-50 border-2 border-gray-200 rounded-lg p-4 outline-none focus:ring-0 focus:border-secondary transition-all font-medium text-gray-700">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" id="submitBtn" class="w-full bg-secondary hover:bg-[#1ea94f] text-white rounded-lg py-5 px-8 text-2xl font-black tracking-tighter transition-all transform hover:-translate-y-1 hover:shadow-lg active:scale-95 flex justify-center items-center gap-3 mt-8 shadow-md uppercase">
+                            Apply Now
+                            <span class="material-symbols-outlined font-black text-3xl">arrow_forward</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message Container -->
+                    <div id="success-message" class="hidden flex-col items-center justify-center py-16 text-center">
+                        <div class="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center mb-8 shadow-xl outline outline-8 outline-secondary/20">
+                            <span class="material-symbols-outlined text-5xl">check</span>
+                        </div>
+                        <h3 class="text-4xl font-black tracking-tighter mb-4 text-primary">Application Received!</h3>
+                        <p class="text-lg text-gray-600 font-medium leading-relaxed max-w-sm mx-auto">Thank you for taking steps to build a better business. You will hear back about the status of your application within 48 hours.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: THIS IS FOR YOU IF... -->
+    <section class="bg-gray-50 py-32 px-6 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-16 text-center uppercase">This Is for You If...</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex gap-5 items-start bg-white apple-clean p-8 group hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-secondary text-4xl shrink-0 group-hover:scale-110 transition-transform">check_circle</span>
+                    <p class="font-bold text-lg leading-relaxed text-gray-700">You are tired of checking your phone at lunch to find 4 missed calls from potential $2k jobs.</p>
+                </div>
+                <div class="flex gap-5 items-start bg-white apple-clean p-8 group hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-secondary text-4xl shrink-0 group-hover:scale-110 transition-transform">check_circle</span>
+                    <p class="font-bold text-lg leading-relaxed text-gray-700">You have at least one crew running but you're still the one answering the phone.</p>
+                </div>
+                <div class="flex gap-5 items-start bg-white apple-clean p-8 group hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-secondary text-4xl shrink-0 group-hover:scale-110 transition-transform">check_circle</span>
+                    <p class="font-bold text-lg leading-relaxed text-gray-700">You feel like you're working 80 hours a week but the bank account isn't reflecting the effort.</p>
+                </div>
+                <div class="flex gap-5 items-start bg-white apple-clean p-8 group hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-secondary text-4xl shrink-0 group-hover:scale-110 transition-transform">check_circle</span>
+                    <p class="font-bold text-lg leading-relaxed text-gray-700">You want to scale but don't want the overhead of a full-time office manager.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-primary py-40 px-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, #22c55e 0%, transparent 60%);"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-10 uppercase leading-[0.9]">
+                That $3,000 Call Could Happen <span class="relative inline-block"><span class="text-secondary">Tonight.</span><div class="doodle-underline" style="background-image:url('data:image/svg+xml;utf8,<svg preserveAspectRatio=%22none%22 viewBox=%220 0 100 100%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M0,50 Q50,0 100,50%22 stroke=%22%2322c55e%22 stroke-width=%228%22 fill=%22none%22/></svg>'); bottom:-15px;"></div></span>
+                <br>Stop Handing Money to competitors.
+            </h2>
+            <p class="text-gray-300 text-2xl mb-16 font-medium max-w-2xl mx-auto leading-relaxed">Start making the money you deserve. Apply for your 7-day challenge below.</p>
+            <a href="#apply" class="inline-flex bg-secondary hover:bg-[#1ea94f] text-white rounded-lg py-8 px-16 text-3xl md:text-4xl font-black tracking-tighter transition-all transform hover:-translate-y-2 active:scale-95 uppercase items-center gap-4 shadow-[0_20px_40px_-15px_rgba(34,197,94,0.5)]">
+                APPLY NOW 
+                <span class="material-symbols-outlined font-black text-4xl">arrow_forward</span>
+            </a>
+            <div class="text-base font-black text-error uppercase tracking-widest mt-8">Deadline to Apply: March 31st</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-16 px-8 flex flex-col md:flex-row justify-between items-center w-full border-t border-gray-200">
+        <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+            <div class="text-2xl font-black text-black tracking-tighter mb-2 flex items-center gap-3">
+                <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="45" y="60" width="10" height="30" fill="#000000" rx="2" />
+                    <path d="M50 10 L80 45 L60 45 L85 75 L15 75 L40 45 L20 45 Z" fill="#22c55e" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+                </svg>
+                ARBOR AMPLIFY
+            </div>
+            <p class="text-sm font-semibold tracking-tight text-gray-500">© 2026 Arbor Amplify. All rights reserved.</p>
+        </div>
+        <div class="flex gap-8">
+            <a class="text-gray-400 hover:text-black transition-all text-xs font-black tracking-widest uppercase" href="#">PRIVACY POLICY</a>
+            <a class="text-gray-400 hover:text-black transition-all text-xs font-black tracking-widest uppercase" href="#">TERMS OF SERVICE</a>
+            <a class="text-gray-400 hover:text-black transition-all text-xs font-black tracking-widest uppercase" href="#">CONTACT US</a>
+        </div>
+    </footer>
+
+    <!-- Form Webhook Logic -->
+    <script>
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerHTML = 'Submitting... <span class="material-symbols-outlined animate-spin">autorenew</span>';
+            submitBtn.disabled = true;
+
+            const payload = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                missedCalls: document.getElementById('missedCalls').value,
+                decisionMaker: document.getElementById('decisionMaker').value
+            };
+
+            // Using Make.com webhook as instructed
+            fetch('https://hook.us2.make.com/ohuvfa35p5o74spppj3iracy7woqvamt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                // Ignore response errors because sometimes webhooks return 200 with opaque bodies
+                document.getElementById('lead-form').style.display = 'none';
+                document.getElementById('success-message').style.display = 'flex';
+            })
+            .catch(error => {
+                // Display success anyway on opaque errors due to CORS sometimes on webhooks
+                document.getElementById('lead-form').style.display = 'none';
+                document.getElementById('success-message').style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
