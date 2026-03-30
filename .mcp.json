@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "make": {
+      "command": "npx",
+      "args": ["-y", "@makehq/mcp-server"],
+      "env": {
+        "MAKE_API_KEY": "20f71b63-dac8-49e0-b30f-305f90b7fe52",
+        "MAKE_ZONE": "us2.make.com",
+        "MAKE_TEAM": "4246092"
+      }
+    }
+  }
+}
